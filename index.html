@@ -24,8 +24,24 @@ h1{margin:0;font-size:20px}
 /* Konten */
 .box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:20px;border-radius:12px}
 .menu{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
-.btn{padding:14px;border-radius:10px;text-align:center;font-weight:600;cursor:pointer;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.06);transition:.2s}
-.btn:hover{background:rgba(0,255,0,0.12);transform:translateY(-3px)}
+
+/* Tombol menu sebagai link */
+.menu a{
+  padding:14px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:600;
+  cursor:pointer;
+  background:rgba(0,0,0,0.2);
+  border:1px solid rgba(255,255,255,0.06);
+  color:#00ff00;
+  text-decoration:none;
+  transition:.2s;
+}
+.menu a:hover{
+  background:rgba(0,255,0,0.12);
+  transform:translateY(-3px);
+}
 </style>
 </head>
 <body>
@@ -51,12 +67,14 @@ h1{margin:0;font-size:20px}
       <p style="color:var(--muted);margin-bottom:20px">Silakan pilih salah satu menu di bawah untuk melanjutkan.</p>
 
       <div class="menu">
-        <div class="btn">FORMULIR PEMUKTAHIRAN DATA</div>
-        <div class="btn">FORM RIWAYAT HIDUP</div>
-        <div class="btn">FORM UKP</div>
-        <div class="btn">FORM KGB</div>
-        <div class="btn">FORM PERSONEL MASUK</div>
-        <div class="btn">FORM PERSONEL KELUAR</div>
+        <a href="tor.html">formulir pemuktahiran DATA</a>
+        <a href="renprogja.html">formulir riwayat HIDUP</a>
+        <a href="progja.html">formulir KU-1</a>
+        <a href="renlakgiat.html">monitoring UKP</a>
+        <a href="evaluasi.html">monitoring KGB</a>
+        <a href="arsip.html">formulir CUTI</a>
+        <a href="arsip.html">MONITORING PENDIDIKAN</a>
+        <a href="arsip.html">MONITORING PENDIDIKAN</a>
       </div>
     </div>
 
