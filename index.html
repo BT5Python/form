@@ -85,6 +85,14 @@ h1{margin:0;font-size:20px}
 
   </div>
 </div>
+<audio id="bgm" src="musik.mp3" autoplay loop hidden></audio>
+
+<script>
+document.addEventListener("click", function() {
+  const bgm = document.getElementById("bgm");
+  if (bgm.paused) bgm.play();
+}, { once:true });
+</script>
 
 </body>
 </html>
