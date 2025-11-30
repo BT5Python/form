@@ -93,6 +93,23 @@ document.addEventListener("click", function() {
   if (bgm.paused) bgm.play();
 }, { once:true });
 </script>
+<script>
+function openFullscreen() {
+  const elem = document.documentElement;
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { // Safari / iPad
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // Windows tablet
+    elem.msRequestFullscreen();
+  }
+}
+
+document.addEventListener("click", function() {
+  openFullscreen();
+}, { once:true });
+</script>
 
 </body>
 </html>
