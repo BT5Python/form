@@ -78,7 +78,34 @@ h1{margin:0;font-size:20px}
   text-shadow: 0 0 5px red;
   opacity: 0.9;
   z-index: 9999; /* 🔥 INI YANG KURANG */
-}  
+}
+/* Typing Box */
+.typing-box{
+  background: rgba(0,120,255,0.18);
+  border: 1px solid rgba(0,150,255,0.5);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,140,255,0.3);
+}
+
+#typing-text{
+  color: #7fdcff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+#typing-text::after{
+  content:"_";
+  animation: blinkCursor 0.6s infinite;
+}
+
+@keyframes blinkCursor{
+  0%,100%{opacity:1}
+  50%{opacity:0}
+}
 </style>
 </head>
 <body>
