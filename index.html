@@ -78,35 +78,7 @@ h1{margin:0;font-size:20px}
   text-shadow: 0 0 5px red;
   opacity: 0.9;
   z-index: 9999; /* 🔥 INI YANG KURANG */
-}
-/* Typing Box */
-.typing-box{
-  display:inline-block;
-  background:#0066ff;
-  padding:8px 14px;
-  border-radius:6px;
-  margin-bottom:20px;
-
-  box-shadow:0 0 10px rgba(0,120,255,0.6);
-}
-
-#typing-text{
-  color:white;
-  font-size:14px;
-  letter-spacing:1px;
-  white-space:nowrap;
-  font-weight:bold;
-}
-
-#typing-text::after{
-  content:"_";
-  animation:blinkCursor .6s infinite;
-}
-
-@keyframes blinkCursor{
-  0%,100%{opacity:1}
-  50%{opacity:0}
-}
+}  
 </style>
 </head>
 <body>
@@ -127,10 +99,8 @@ h1{margin:0;font-size:20px}
     </header>
 
     <div class="box">
-      <h3 style="margin-top:0;color:#00ff00">Main course</h3>      
-      <div class="typing-box">
-      <span id="typing-text"></span>
-      </div>
+      <h3 style="margin-top:0;color:#00ff00">Main course</h3>
+      <p style="color:var(--muted);margin-bottom:20px">Please select one of the menus below to continue.</p>
 
       <div class="menu">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5LDidnOuAl3XKCtMHKDKbWEz_xV7mklLFvIQ1KBBuxNhezw/viewform?usp=dialog">1. FORM PEMUKTAHIRAN DATA</a>        
@@ -225,36 +195,8 @@ function tampilkanTanggal() {
 setInterval(tampilkanTanggal, 1000);
 tampilkanTanggal();
 </script>
-<script>
-const text = "Please select one of the menus below to continue.";
-
-let index = 0;
-
-function ketikText() {
-  const target = document.getElementById("typing-text");
-
-  if(index < text.length){
-    target.textContent += text.charAt(index);
-    index++;
-
-    setTimeout(ketikText, 45);
-  } else {
-
-    // ulang lagi setelah selesai
-    setTimeout(() => {
-      target.textContent = "";
-      index = 0;
-      ketikText();
-    }, 2500);
-
-  }
-}
-
-ketikText();
-</script>
-<body>
-<div class="bottom-right">
-evolution is my revolution
+   <div class="bottom-right">
+  evolution is my revolution
 </div>
 </body>
 </html>
