@@ -78,7 +78,31 @@ h1{margin:0;font-size:20px}
   text-shadow: 0 0 5px red;
   opacity: 0.9;
   z-index: 9999; /* 🔥 INI YANG KURANG */
-}  
+}
+.typing-box{
+  display:inline-block;
+  background:#0057d8;
+  padding:6px 10px;
+  border-radius:2px;
+  margin-bottom:20px;
+}
+
+#typing-text{
+  color:white;
+  font-size:14px;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+#typing-text::after{
+  content:"_";
+  animation:blinkCursor .5s infinite;
+}
+
+@keyframes blinkCursor{
+  0%,100%{opacity:1}
+  50%{opacity:0}
+}
 </style>
 </head>
 <body>
@@ -100,7 +124,9 @@ h1{margin:0;font-size:20px}
 
     <div class="box">
       <h3 style="margin-top:0;color:#00ff00">Main course</h3>
-      <p style="color:var(--muted);margin-bottom:20px">Please select one of the menus below to continue.</p>
+      <div class="typing-box">
+      <span id="typing-text"></span>
+      </div>
 
       <div class="menu">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5LDidnOuAl3XKCtMHKDKbWEz_xV7mklLFvIQ1KBBuxNhezw/viewform?usp=dialog">1. FORM PEMUKTAHIRAN DATA</a>        
@@ -194,6 +220,25 @@ function tampilkanTanggal() {
 // update tiap detik biar live
 setInterval(tampilkanTanggal, 1000);
 tampilkanTanggal();
+</script>
+<script>
+const text = "Please select one of the menus below to continue.";
+
+let i = 0;
+
+function typingEffect() {
+
+  if(i < text.length){
+
+    document.getElementById("typing-text").innerHTML += text.charAt(i);
+
+    i++;
+
+    setTimeout(typingEffect, 45);
+  }
+}
+
+typingEffect();
 </script>
    <div class="bottom-right">
   evolution is my revolution
