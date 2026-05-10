@@ -81,25 +81,26 @@ h1{margin:0;font-size:20px}
 }
 /* Typing Box */
 .typing-box{
-  background: rgba(0,120,255,0.18);
-  border: 1px solid rgba(0,150,255,0.5);
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  box-shadow: 0 0 12px rgba(0,140,255,0.3);
+  display:inline-block;
+  background:#0066ff;
+  padding:8px 14px;
+  border-radius:6px;
+  margin-bottom:20px;
+
+  box-shadow:0 0 10px rgba(0,120,255,0.6);
 }
 
 #typing-text{
-  color: #7fdcff;
-  font-size: 14px;
-  letter-spacing: 1px;
-  white-space: nowrap;
+  color:white;
+  font-size:14px;
+  letter-spacing:1px;
+  white-space:nowrap;
+  font-weight:bold;
 }
 
 #typing-text::after{
   content:"_";
-  animation: blinkCursor 0.6s infinite;
+  animation:blinkCursor .6s infinite;
 }
 
 @keyframes blinkCursor{
